@@ -31,8 +31,8 @@ public class MoveObject : MonoBehaviour
          transform.position = new Vector3(this.transform.position.x, .5f + update , this.transform.position.z);
 
          if(direction == false)
-         update = (update + .001f);
+         update = (update + .0002f);
          if(direction == true)
-         update = (update - .001f);
+         update = (update - .0002f);
     }
 }

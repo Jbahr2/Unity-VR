@@ -1,0 +1,49 @@
+# Created by Kenney (www.kenney.nl)
+
+newmtl stone(Clone)
+Kd 0.571 0.559 0.736
+map_Kd Textures/stone(Clone).png
+
+newmtl foliage(Clone)
+Kd 0 0.655 0.486
+map_Kd Textures/foliage(Clone).png
+
+newmtl stoneDark(Clone)
+Kd 0.177 0.189 0.283
+map_Kd Textures/stoneDark(Clone).png
+
+newmtl wood(Clone)
+Kd 0.84 0.435 0.305
+map_Kd Textures/wood(Clone).png
+
+newmtl glass(Clone)
+Kd 1 1 1
+map_Kd Textures/glass(Clone).png
+
+newmtl bricks(Clone)
+Kd 0.559 0.134 0.074
+map_Kd Textures/bricks(Clone).png
+
+newmtl bricksDark(Clone)
+Kd 0.172 0.007 0
+
+newmtl woodLight(Clone)
+Kd 0.779 0.415 0.166
+map_Kd Textures/woodLight(Clone).png
+
+newmtl woodDark(Clone)
+Kd 0.517 0.248 0.162
+map_Kd Textures/woodDark(Clone).png
+
+newmtl dark(Clone)
+Kd 0.745 0.315 0.23
+map_Kd Textures/dark(Clone).png
+
+newmtl _defaultMat(Clone)
+Kd 0.939 0.953 1
+map_Kd Textures/_defaultMat(Clone).png
+
+newmtl steel(Clone)
+Kd 0.234 0.51 0.155
+map_Kd Textures/steel(Clone).png
+
