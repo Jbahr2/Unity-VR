@@ -3,11 +3,17 @@ guid: 4b8f787a8180f164090dd7b4e45da975
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mergedBlocksMat
+    second: {fileID: -2085073835866649581, guid: c668951bdbfb04c419c8543250d2754b,
+      type: 3}
   materials:
     materialImportMode: 1
     materialName: 0
-    materialSearch: 1
+    materialSearch: 2
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
