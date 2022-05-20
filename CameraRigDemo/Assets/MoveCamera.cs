@@ -15,7 +15,7 @@ public class MoveCamera : MonoBehaviour {
     {
 
         if (playerObj == null)
-            playerObj = GameObject.Find("VRCamera");
+            playerObj = GameObject.Find("VR Camera");
         if (house1 == null)
             house1 = GameObject.Find("House fix");
         if (house2 == null)
@@ -24,8 +24,12 @@ public class MoveCamera : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        Vector3 currentPos = playerObj.transform.position + new Vector3(0.0f,0.0f,0.0f);
+        Vector3 currentPos = playerObj.transform.position - pos;
         transform.position = Vector3.Lerp(transform.position, currentPos, Speed * Time.deltaTime);
-        transform.rotation = playerObj.transform.rotation;
+        //transform.rotation = playerObj.transform.rotation;
+
+        transform.up = playerObj.transform.up;
+        transform.forward = playerObj.transform.forward;
+        transform.right = playerObj.transform.right;
     }
 }

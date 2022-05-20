@@ -4,11 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/CameraRigDemo.unity
+    guid: 9fda3d7e039543d4eb6493833c40613f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: b45f8946005fe8c438874a6da702f71b,
       type: 2}
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: 7d132ec4283593c49a1eac863c3b8012,
+      type: 2}
+    Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 122ebcfc2e529354f830f8933c4fe94f,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3f93ddda70ffb874cb96782837df8fae,
       type: 2}

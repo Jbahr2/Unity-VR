@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 public class navigationQuaternionKeys3 : MonoBehaviour
 {
 public CharacterController controller;
@@ -11,10 +12,14 @@ private Vector3 playerVelocity;
 private bool groundedPlayer;
 private float gravityValue = -9.81f;
 private Vector3 move;
+public float mouseSensitivity = 100f;
+public Transform playerBody;
+float xRotation = 0f;
     // Start is called before the first frame update
     void Start()
     {
         Application.targetFrameRate = 60;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -22,6 +27,16 @@ private Vector3 move;
 
         Slope();
         Move2();
+    }
+    void Mouse(){
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        playerBody.Rotate(Vector3.up * mouseX);
     }
     void Move2(){
       Quaternion yaw= Quaternion.AngleAxis(0.0f*Time.deltaTime, transform.up);
@@ -42,7 +57,6 @@ private Vector3 move;
          yaw= Quaternion.AngleAxis(-speed*Time.deltaTime, transform.up);
       }
       if(Input.GetKey(KeyCode.X)){
-
         yaw= Quaternion.AngleAxis(speed*Time.deltaTime, transform.up);
       }
 
